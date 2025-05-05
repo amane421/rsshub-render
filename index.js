@@ -3,7 +3,7 @@ const Parser = require('rss-parser');
 const app = express();
 const parser = new Parser();
 
-const PORT = process.env.PORT || 3000;
+const port = process.env.PORT || 3000; // 10000ではなく任意のデフォルト
 
 app.get('/rss', async (req, res) => {
   const feedUrl = req.query.url;
